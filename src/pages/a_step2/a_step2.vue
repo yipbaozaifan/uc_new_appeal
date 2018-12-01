@@ -1,5 +1,5 @@
 <template>
-    <div id="app" class="complaint_select_type">
+    <div id="app" class="complaint_select_type" @click="bodyClick">
         <mzheader link="https://www.meizu.com/"></mzheader>
         <h1 class="title">账号申诉</h1>
         <mzprogress :steps="steps" :actived="1" size="96" line-length="600"></mzprogress>
@@ -384,6 +384,9 @@ export default {
     varPhone() {
         let phone = '00' + this.$refs.phoneInput.countryCode.code + ':' + this.phone;
         return axios.get(`/uc/system/webjsp/resetpwd/checkSecurityPhone?phone=${phone}&account=${this.account}`);
+    },
+    bodyClick() {
+        this.$refs.phoneInput.changeCycode = false;
     }
   },
   mounted() {
@@ -466,6 +469,9 @@ export default {
                         height: 20px;
                         &:disabled {
                             background-color: #ffffff;
+                        }
+                        &::placeholder {
+                            color: rgba(0,0,0,0.4);
                         }
                     }  
                     &.error {

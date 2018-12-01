@@ -131,8 +131,8 @@ export default {
                 border: 1px solid #dcdfe6;
                 border-radius: 2px;
                 box-sizing: border-box;
-                width: 16px;
-                height: 16px;
+                width: 18px;
+                height: 18px;
                 background-color: #fff;
                 z-index: 1;
                 transition: border-color .25s cubic-bezier(.71,-.46,.29,1.46),background-color .25s cubic-bezier(.71,-.46,.29,1.46);
@@ -166,6 +166,7 @@ export default {
             display: inline-block;
             padding-left: 6px;
             line-height: 19px;
+            font-weight: 600;
         }
     }
 </style>

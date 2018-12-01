@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="app" @click="bodyClick">
         <mzheader></mzheader>
         <h1 class="title">账号申诉</h1>
         <mzprogress :steps="steps" :actived="4" size="96" line-length="600"></mzprogress>
@@ -296,6 +296,9 @@ export default {
             return;
         }
         this.$refs.varInput.allowSend();
+    },
+    bodyClick() {
+        this.$refs.phoneInput.changeCycode = false;
     }
   },
   mounted() {

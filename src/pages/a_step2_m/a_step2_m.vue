@@ -20,16 +20,18 @@
             </div>
         </div>
         <div class="content content-form" v-else>
-                <div class="checkbox-bar">
-                    <div class="checkbox-option">
-                        <p class="option-name">清除密保</p>
-                        <p class="option-desc">清除账号原有密保并重置密码</p>
+                <div class="checkbox-bar" style="padding-bottom: 0;">
+                    <div class="outer-checkbox">
+                        <div class="checkbox-option">
+                            <p class="option-name">清除密保</p>
+                            <p class="option-desc">清除账号原有密保并重置密码</p>
+                        </div>
+                        <mz-checkbox
+                            v-model="resetQuestions"
+                            circle
+                        >
+                        </mz-checkbox>
                     </div>
-                    <mz-checkbox
-                        v-model="resetQuestions"
-                        circle
-                    >
-                    </mz-checkbox>
                 </div>
                 <div class="checkbox-bar">
                     <div class="checkbox-option">
@@ -419,17 +421,21 @@ export default {
                 height: px2vw(216);
                 padding: px2vw(54) px2vw(48);
                 box-sizing: border-box;
+                .outer-checkbox {
+                    padding-bottom: px2vw(54);
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                }
                 .checkbox-option {
                     display: inline-block;
                     vertical-align: middle;
                     .option-desc {
                         opacity: 0.4;
-                        font-weight: 500;
+                        font-weight: normal;
                         font-size: 12px;
                         margin-top: px2vw(9);
                     }
                     .option-name {
-                        font-weight: 500;
+                        font-weight: normal;
                         font-size: 16px;
                     }
                 }
@@ -478,6 +484,9 @@ export default {
                         display: inline-block;
                         &:disabled {
                             background-color: #ffffff;
+                        }
+                        &::placeholder {
+                            color:rgba(0, 0, 0, 0.2);
                         }
                     }   
                     .extra-tips {

@@ -153,7 +153,7 @@
                 </div>
                 <div class="section">
                     <span class="select-label">注册地：</span>
-                    <div class="select-content">
+                    <div class="select-content" style="margin-right: 8px;">
                         <el-select v-model="RegLand[0]" placeholder="请选择省份" @change="RegLand[1] = ''; showRegLandTips = false;step3Ok[1] = true;">
                             <el-option
                                 v-for="(item, index) in CityMap"
@@ -181,7 +181,7 @@
                         <div class="bar selection-bar" v-for="(item, index) in UsedLand" :key="index" :class="{
                             'mt20': index > 0
                         }">
-                            <div class="select-content">
+                            <div class="select-content" style="margin-right: 8px;">
                                 <el-select v-model="item.p" placeholder="请选择省份" @change="item.c = ''; showUsedLandTips = false;step3Ok[2] = true;">
                                     <el-option
                                         v-for="(p, i) in CityMap"
@@ -2590,7 +2590,7 @@ export default {
                                 height: 40px;
                                 font-family: 'operations';
                                 line-height: 40px;
-                                font-size: 22px;
+                                font-size: 26px;
                                 color: #387AFF;
                                 cursor: pointer;
                                 &.add {
@@ -2625,7 +2625,7 @@ export default {
                                 height: 26px;
                                 font-family: 'operations';
                                 line-height: 26px;
-                                font-size: 22px;
+                                font-size: 26px;
                                 color: #387AFF;
                                 cursor: pointer;
                                 &.add {
@@ -2663,7 +2663,7 @@ export default {
                                 margin-bottom: 0;
                             }
                             .outer-input {
-                                width: 256px;
+                                width: 262px;
                                 border: 1px solid rgba(0,0,0,0.15);
                                 border-radius: 5px;
                                 display: inline-block;
@@ -2694,7 +2694,7 @@ export default {
                                     height: 26px;
                                     font-family: 'operations';
                                     line-height: 26px;
-                                    font-size: 22px;
+                                    font-size: 26px;
                                     color: #387AFF;
                                     cursor: pointer;
                                     &.add {
@@ -2708,7 +2708,7 @@ export default {
                         width: 292px;
                         display: inline-block;
                         .el-date-editor.el-input, .el-date-editor.el-input__inner {
-                            width: 284px;
+                            width: 292px;
                         }
                     }
                     .phone-type-tips {

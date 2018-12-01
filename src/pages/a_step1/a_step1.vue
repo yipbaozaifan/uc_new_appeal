@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="app" @click="bodyClick">
         <mzheader link="https://www.meizu.com/"></mzheader>
         <h1 class="title">账号申诉</h1>
         <p class="complaint-text">我们会人工审核你提交的信息，并在三个工作日内将结果发送到安全手机</p>
@@ -105,6 +105,9 @@ export default {
     closeModal() {
         this.showModal = false;
         this.message = "";
+    },
+    bodyClick() {
+        this.$refs.accountInput.changeCycode = false;
     }
   },
   mounted() {
@@ -122,7 +125,7 @@ export default {
             line-height: 24px;
             width: 518px;
             margin: 0 auto;
-            font-weight: 600;
+            font-weight: 500;
             &-gray{
                 font-size: 14px;
                 color: #999999;
