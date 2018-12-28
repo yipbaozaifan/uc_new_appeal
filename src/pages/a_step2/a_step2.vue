@@ -407,18 +407,20 @@ export default {
         .bar-text {
             margin-top: 74px;
             .complaint-text {
-                font-size: 16px;
+                font-size: 20px;
                 color: #000000;
                 letter-spacing: 0;
                 line-height: 24px;
                 width: 518px;
                 margin: 0 auto;
-                font-weight: 600;
+                font-weight: 500;
                 &-gray{
                     font-size: 14px;
                     color: #999999;
                     width: 518px;
                     margin: 0 auto;
+                    line-height: 19px;
+                    margin-top: 6px;
                 }
             }
         }
@@ -452,6 +454,7 @@ export default {
                     font-weight: 500;
                     font-size: 14px;
                     margin-left: 26px;
+                    line-height: 19px;
                 }
                 .extra {
                     display: inline-block;

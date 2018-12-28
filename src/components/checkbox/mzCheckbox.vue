@@ -118,9 +118,9 @@ export default {
                     border-left: 0;
                     border-top: 0;
                     height: 7px;
-                    left: 5px;
+                    left: 6px;
                     position: absolute;
-                    top: 2px;
+                    top: 3px;
                     transform: rotate(45deg) scaleY(0);
                     width: 3px;
                     transition: transform .15s ease-in .05s;
@@ -164,9 +164,9 @@ export default {
         }
         .mz_checkbox-label {
             display: inline-block;
-            padding-left: 6px;
+            padding-left: 2px;
             line-height: 19px;
-            font-weight: 600;
+            font-weight: 500;
         }
     }
 </style>
