@@ -106,8 +106,8 @@ export default {
                     &::after {
                         transform: rotate(45deg) scaleY(1);
                     }
-                    background-color: #409eff;
-                    border-color: #409eff;
+                    background-color: #387AFF;
+                    border-color: #387AFF;
                 }
             }
             .mz_checkbox-inner {

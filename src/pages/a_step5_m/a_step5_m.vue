@@ -353,6 +353,7 @@ export default {
                     }
                     .success-container {
                         text-align: center;
+                        margin-top: px2vw(381);
                         img {
                             width: px2vw(618);
                         }
